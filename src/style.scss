@@ -1,0 +1,19 @@
+.formContainer{
+    background-color:beige;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formWrapper{
+    background-color: white;
+    padding: 20px 60px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; 
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
