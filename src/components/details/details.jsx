@@ -88,7 +88,7 @@ const Details = () => {
           
         </div>
         <button onClick ={handleBlock}>
-          isCurrentUserBlocked ? "You are Blocked!" : "user Blocked" : "Block user"
+          {isCurrentUserBlocked ? "You are Blocked!" : "user Blocked" : "Block user"}
         </button>
         <button className='logout' onClick={() => auth.signOut()}>Logout</button>
       </div>
