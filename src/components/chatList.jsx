@@ -10,60 +10,18 @@ const ChatList = () => {
                 <img src="../public/search.png" />
                 <input type="text" placeholder="Search" />
             </div>
-            <img src={addMode ?"../public/minus.png" : "../public/plus.png"} className='add'
-            onClick={() => setAddMode((prev) => !prev)}
-            />
-        </div>
-        <div className="item">
-            <img src="../public/avatar.png"/>
-            <div className="texts">
-                <span>Doctor Doom</span>
-                <p>HELLO</p>
+            {chats.map((chat) => ( // Loop through chat data
+            <div className="item" key={chat.id}> {/* Use a unique key for each chat */}
+              <img src="../public/avatar.png" alt="User avatar" />
+              <div className="texts">
+                    <span>{chat.name}</span>
+                    <p>{chat.lastMessage}</p>
+              </div>
             </div>
-        </div>
-        <div className="item">
-            <img src="../public/avatar.png"/>
-            <div className="texts">
-                <span>Doctor Doom</span>
-                <p>HELLO</p>
-            </div>
-        </div>
-        <div className="item">
-            <img src="../public/avatar.png"/>
-            <div className="texts">
-                <span>Doctor Doom</span>
-                <p>HELLO</p>
-            </div>
-        </div>
-        <div className="item">
-            <img src="../public/avatar.png"/>
-            <div className="texts">
-                <span>Doctor Doom</span>
-                <p>HELLO</p>
-            </div>
-        </div>
-        <div className="item">
-            <img src="../public/avatar.png"/>
-            <div className="texts">
-                <span>Doctor Doom</span>
-                <p>HELLO</p>
-            </div>
-        </div>    <div className="item">
-            <img src="../public/avatar.png"/>
-            <div className="texts">
-                <span>Doctor Doom</span>
-                <p>HELLO</p>
-            </div>
-        </div>    <div className="item">
-            <img src="../public/avatar.png"/>
-            <div className="texts">
-                <span>Doctor Doom</span>
-                <p>HELLO</p>
-            </div>
-        </div>
-        {addMode && <Adduser />}
+      ))}
+      {addMode && <Adduser />}
     </div>
   );
 };
 
-export default ChatList
+export default ChatList;
